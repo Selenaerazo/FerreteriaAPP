@@ -52,16 +52,16 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <Button
-        android:id="@+id/btnRegistrarCliente"
+        android:id="@+id/btnListarClientes"
         android:layout_width="283dp"
         android:layout_height="54dp"
         android:backgroundTint="#2836A1"
-        android:onClick="registrar"
+        android:onClick="listarClientes"
         android:text="Maestro de clientes"
         app:flow_verticalAlign="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.264" />
@@ -73,6 +73,7 @@
         android:backgroundTint="#2836A1"
         android:text="Maestro de factura"
         tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="430dp" />
+        tools:layout_editor_absoluteY="430dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
