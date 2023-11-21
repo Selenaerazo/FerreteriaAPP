@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".editar_factura"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtFactura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edición Factura"
+        android:textAlignment="center"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/txtCodigoFactura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Código Factura:"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/editTextCodigoFactura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:labelFor="@id/txtCodigoFactura"
+        android:inputType="number"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/txtFechaFactura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fecha:"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/editTextFechaFactura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:labelFor="@id/txtFechaFactura"
+        android:inputType="date"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/txtTotalFactura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:labelFor="@id/txtTotalFactura"
+        android:inputType="number"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnFactura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:textSize="24sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEditarFactura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:clickable="true"
+        android:src="@drawable/editar_factura" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEliminarFactura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:clickable="true"
+        android:src="@drawable/delete_factura" />
+
+</LinearLayout>

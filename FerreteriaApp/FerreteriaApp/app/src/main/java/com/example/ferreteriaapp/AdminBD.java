@@ -7,20 +7,27 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class AdminBD extends SQLiteOpenHelper {
-    public AdminBD(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+
+    private static final int DATABASE_VERSION = 1;
+    private static final String DATABASE_NOMBRE = "Ferreteria.db";
+    public static final String TABLE_CLIENTE = "t_cliente";
+    public static final String TABLE_PEDIDO = "t_pedido";
+    public static final String TABLE_PRODUCTO = "t_producto";
+    public static final String TABLE_FACTURA = "t_factura";
+    public AdminBD(@Nullable Context context) {
+        super(context, DATABASE_NOMBRE, null, DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase BaseDatos) {
-        BaseDatos.execSQL("create table cliente(cedula int primary key, nombre text, telefono int, direccion text)");
-        BaseDatos.execSQL("create table pedido(codigopedido int primary key, descripcionpedido text, cantidadpedido int)");
-        BaseDatos.execSQL("create table producto(codigoproducto int primary key, descripcionproducto text, valorproducto int)");
-        BaseDatos.execSQL("create table factura(codigofactura int primary key, valorfactura int)");
+        BaseDatos.execSQL("CREATE TABLE " + TABLE_CLIENTE + "(" + " cedula int primary key," + "nombre text," + "telefono text,"+ "direccion text)");
+        BaseDatos.execSQL("CREATE TABLE " + TABLE_PEDIDO + "(" + " pedidoid int primary key," + "descripcion text," + "fecha text,"+ "cantidad int)");
+        BaseDatos.execSQL("CREATE TABLE " + TABLE_PRODUCTO + "(" + " productoid int primary key," + "descripcion text," + "valor int)");
+        BaseDatos.execSQL("CREATE TABLE " + TABLE_FACTURA + "(" + " numeroFactura int primary key," + "fecha text," + "total int)");
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase dB, int oldVersion, int newVersion) {
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
     }
 }
